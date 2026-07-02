@@ -55,7 +55,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Categories", href: "/categories", icon: Tags },
-  { label: "Orders", href: "/orders", icon: ShoppingCart },
+  { label: "Orders", href: "/manage-orders", icon: ShoppingCart },
   { label: "Customers", href: "/customers", icon: Users },
   // ─── Module 03 ───
   {

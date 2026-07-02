@@ -249,7 +249,7 @@ export default function CsvImportsPage() {
               {(Object.keys(DEFAULT_MAPPING) as Array<keyof CsvColumnMapping>).map((field) => (
                 <div key={field}>
                   <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">
-                    {field.replace(/([A-Z])/g, " $1").trim()}
+                    {String(field).replace(/([A-Z])/g, " $1").trim()}
                     {(field === "name" || field === "sku") && " *"}
                   </label>
                   <select

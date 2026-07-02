@@ -316,7 +316,7 @@ export interface CsvPreviewRow {
 
 // ─── API Connection ───────────────────────────────────────────────────────────
 
-export type ApiMethod = "GET" | "POST" | "PUT" | "DELETE";
+export type ApiMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 export type ApiConnectionStatus = "idle" | "testing" | "success" | "error";
 
 export interface ApiConnection {

@@ -7,7 +7,7 @@ import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react";
 import { loginUser } from "@/lib/firebase/auth";
 import { getAppUser } from "@/lib/firebase/auth";
 
-function LoginPageContent() 
+function LoginPageContent() {
   const router = useRouter();
   const params = useSearchParams();
   const redirect = params.get("redirect") ?? "/";
@@ -120,5 +120,12 @@ function LoginPageContent()
         </Link>
       </p>
     </div>
+  );
+}
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginPageContent />
+    </Suspense>
   );
 }

@@ -114,7 +114,7 @@ export default function DashboardPage() {
         {[
           { label: "Add Product", href: "/products/add-product", color: "bg-brand-600 hover:bg-brand-700 text-white" },
           { label: "Manage Suppliers", href: "/suppliers", color: "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700" },
-          { label: "View Orders", href: "/orders", color: "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700" },
+          { label: "View Orders", href: "/manage-orders", color: "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700" },
           { label: "View Reports", href: "/reports", color: "bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700" },
         ].map((action) => (
           <a

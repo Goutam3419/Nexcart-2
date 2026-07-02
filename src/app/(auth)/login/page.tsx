@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { Suspense, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from "lucide-react";
 import { loginUser } from "@/lib/firebase/auth";
 import { getAppUser } from "@/lib/firebase/auth";
 
-export default function LoginPage() {
+function LoginPageContent() 
   const router = useRouter();
   const params = useSearchParams();
   const redirect = params.get("redirect") ?? "/";

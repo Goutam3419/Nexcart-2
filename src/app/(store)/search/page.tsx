@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Search, SlidersHorizontal, Star, Heart, ShoppingCart, X } from "lucide-react";
@@ -23,7 +23,7 @@ const ALL_PRODUCTS: Product[] = [
 
 type SortOption = "relevance" | "price-low" | "price-high" | "rating";
 
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get("q") ?? "";
 
@@ -201,5 +201,12 @@ export default function SearchPage() {
       </main>
       <Footer />
     </>
+  );
+}
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchPageContent />
+    </Suspense>
   );
 }

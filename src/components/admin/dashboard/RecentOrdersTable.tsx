@@ -28,7 +28,7 @@ export function RecentOrdersTable({ orders }: RecentOrdersTableProps) {
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
       <div className="px-5 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
         <h3 className="font-semibold text-gray-900 dark:text-white">Recent Orders</h3>
-        <a href="/orders" className="text-xs text-brand-600 dark:text-brand-400 font-semibold hover:underline">
+        <a href="/manage-orders" className="text-xs text-brand-600 dark:text-brand-400 font-semibold hover:underline">
           View all
         </a>
       </div>
